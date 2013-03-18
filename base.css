@@ -1,0 +1,66 @@
+body, html { -webkit-user-select:none;margin:0; padding: 0; overflow:hidden; font-family:Arial; font-size:20px }
+#game {
+	width: 600px;
+	height: 300px;
+	border: 1px solid #ccc;
+	background-color:#eee;
+	margin: 30px auto;
+	position: relative;
+	-webkit-user-select:none;
+	outline:none;
+}
+
+#controls {
+	margin: 0 auto;	
+	text-align:center;
+	-webkit-user-select:none;
+	outline:none;
+}
+#controls span {
+	display: inline-block;
+	text-align: center;
+	outline:none;
+	padding: 10px;
+	border: 1px solid #eee;
+}
+
+@-webkit-keyframes w_r {
+	from { background-position: -50px -34px	 }
+	to   { background-position: -50px -102px }
+}
+@-webkit-keyframes w_l {
+	from { background-position: -75px -34px	 }
+	to   { background-position: -75px -102px }
+}
+@-webkit-keyframes w_f {
+	from { background-position: 0 -34px	 }
+	to   { background-position: 0 -102px }
+}
+@-webkit-keyframes w_b {
+	from { background-position: -25px -34px	 }
+	to   { background-position: -25px -102px }
+}
+
+
+.human_a {
+	background-image: url('human.a.gif');
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	width: 25px;
+	height: 34px;
+	overflow: hidden;
+	position: absolute;
+}
+
+.human_a.w_r { -webkit-animation: w_r .3s steps(2) infinite; }
+.human_a.w_l { -webkit-animation: w_l .3s steps(2) infinite; }
+.human_a.w_f { -webkit-animation: w_f .3s steps(2) infinite; }
+.human_a.w_b { -webkit-animation: w_b .3s steps(2) infinite; }
+
+@media handheld, only screen and (max-width: 767px) {
+	#game {
+		width: 320px;
+		height: 300px;
+		margin-top: 0;
+	}
+}

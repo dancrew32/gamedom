@@ -1,4 +1,3 @@
-gamedom
-=======
+## gamedom
 
-A simple 2D game test
+*A simple 2D game test*
